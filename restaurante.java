@@ -37,4 +37,12 @@ public class restaurante{
             abierto = true;
         }
     }
+    
+    public void estado(){
+        System.out.println(nombre + beneficio + abierto);
+    }
+    
+    public void stEstado(){
+        System.out.println("Mi restaurante se llama " + nombre + " tiene " + beneficio + " euros de beneficio y ¿Ahora esta abierto? " + abierto);
+    }
 }
