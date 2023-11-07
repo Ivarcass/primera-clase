@@ -1,9 +1,9 @@
-public class restaurante{
+public class Restaurante{
     private String nombre;
     private int beneficio;
     private boolean abierto;
 
-    public restaurante(int newBeneficio, String newNombre){
+    public Restaurante(int newBeneficio, String newNombre){
         abierto = false;
         beneficio = newBeneficio;
         nombre = newNombre;
@@ -38,11 +38,27 @@ public class restaurante{
         }
     }
     
-    public void estado(){
-        System.out.println(nombre + beneficio + abierto);
+    public String devolverEstado(){
+        String estado;
+        String horario;
+        if (abierto == true){
+            horario = "Si";
+        }
+        else{
+            horario = "No";
+        }
+        estado = "Mi restaurante se llama " + nombre + " tiene " + beneficio + " euros de beneficio y ¿Ahora esta abierto? " + horario;
+        return(estado);
     }
     
-    public void stEstado(){
-        System.out.println("Mi restaurante se llama " + nombre + " tiene " + beneficio + " euros de beneficio y ¿Ahora esta abierto? " + abierto);
+    public void imprimirEstado(){
+        String horario;
+        if (abierto == true){
+            horario = "Si";
+        }
+        else{
+            horario = "No";
+        }
+        System.out.println("Mi restaurante se llama " + nombre + " tiene " + beneficio + " euros de beneficio y ¿Ahora esta abierto? " + horario);
     }
 }
